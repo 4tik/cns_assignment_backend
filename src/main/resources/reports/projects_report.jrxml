@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.21.3.final using JasperReports Library version 6.21.3-4a3078d20785ebe464f18037d738d12fc98c13cf  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Blank_A4_11" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="9c10da41-90d1-4f3d-980b-cb82c9250ac6">
+    <property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+    <property name="com.jaspersoft.studio.data.defaultdataadapter" value="CNS_2024"/>
+    <queryString language="SQL">
+        <![CDATA[select cast(id as varchar(20)) as id, name, introduce, TO_CHAR(start_date_time, 'yyyy-MM-dd') as startDate,
+            TO_CHAR(end_date_time, 'yyyy-MM-dd') as endDate,
+            case when status=0 then 'PRE' when status=1 then 'START' when status=3 then 'END' else '---' end as status
+            from projects]]>
+    </queryString>
+    <field name="id" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.name" value="id"/>
+        <property name="com.jaspersoft.studio.field.label" value="id"/>
+    </field>
+    <field name="name" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.name" value="name"/>
+        <property name="com.jaspersoft.studio.field.label" value="name"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="projects"/>
+    </field>
+    <field name="introduce" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.name" value="introduce"/>
+        <property name="com.jaspersoft.studio.field.label" value="introduce"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="projects"/>
+    </field>
+    <field name="startdate" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.name" value="startdate"/>
+        <property name="com.jaspersoft.studio.field.label" value="startdate"/>
+    </field>
+    <field name="enddate" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.name" value="enddate"/>
+        <property name="com.jaspersoft.studio.field.label" value="enddate"/>
+    </field>
+    <field name="status" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.name" value="status"/>
+        <property name="com.jaspersoft.studio.field.label" value="status"/>
+    </field>
+    <group name="id">
+        <groupExpression><![CDATA[$F{id}]]></groupExpression>
+    </group>
+    <group name="name">
+        <groupExpression><![CDATA[$F{name}]]></groupExpression>
+    </group>
+    <group name="introduce">
+        <groupExpression><![CDATA[$F{introduce}]]></groupExpression>
+    </group>
+    <group name="startdate">
+        <groupExpression><![CDATA[$F{startdate}]]></groupExpression>
+    </group>
+    <group name="enddate">
+        <groupExpression><![CDATA[$F{enddate}]]></groupExpression>
+    </group>
+    <group name="status">
+        <groupExpression><![CDATA[$F{status}]]></groupExpression>
+    </group>
+    <background>
+        <band splitType="Stretch"/>
+    </background>
+    <title>
+        <band height="51" splitType="Stretch">
+            <staticText>
+                <reportElement x="0" y="10" width="554" height="30" uuid="4f4c5436-8e17-4fbf-9211-9e1639bc1685"/>
+                <textElement textAlignment="Center">
+                    <font fontName="Book Antiqua" size="22" isBold="true"/>
+                </textElement>
+                <text><![CDATA[Computer Network Systems Limited]]></text>
+            </staticText>
+        </band>
+    </title>
+    <pageHeader>
+        <band height="6" splitType="Stretch"/>
+    </pageHeader>
+    <columnHeader>
+        <band height="33" splitType="Stretch">
+            <staticText>
+                <reportElement x="0" y="0" width="50" height="30" uuid="471b209a-3897-4c75-8ebf-bfd1f5cf4851">
+                    <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b6374557-91d5-4730-a13d-19ddd0827747"/>
+                </reportElement>
+                <textElement textAlignment="Center">
+                    <font fontName="Cambria Math" size="14" isBold="true"/>
+                </textElement>
+                <text><![CDATA[Id]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="50" y="0" width="110" height="30" uuid="5cb6bf28-f68e-4728-8aad-8455a138b9b4">
+                    <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="0b8c86b9-32e4-4f4f-8fe8-711f170dc22b"/>
+                </reportElement>
+                <textElement textAlignment="Center">
+                    <font fontName="Cambria Math" size="14" isBold="true"/>
+                </textElement>
+                <text><![CDATA[Name]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="159" y="0" width="184" height="30" uuid="9659789f-4021-4441-b62c-d22a001cda9d">
+                    <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="4159b7e9-e4dd-4137-82dc-c04564019f9a"/>
+                </reportElement>
+                <textElement textAlignment="Center">
+                    <font fontName="Cambria Math" size="14" isBold="true"/>
+                </textElement>
+                <text><![CDATA[Introduce]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="343" y="0" width="67" height="30" uuid="58823b47-0dc0-4b2f-9a43-77bbaaa317a5">
+                    <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="460fe6e6-39cd-4329-bc8c-20b9c8a7bea1"/>
+                </reportElement>
+                <textElement textAlignment="Center">
+                    <font fontName="Cambria Math" size="14" isBold="true"/>
+                </textElement>
+                <text><![CDATA[Start Date]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="411" y="0" width="67" height="30" uuid="d858947c-b51f-4e22-a597-81011aa6e13b">
+                    <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="9bbd77e9-10e9-4eef-abe0-2ceb326395d6"/>
+                </reportElement>
+                <textElement textAlignment="Center">
+                    <font fontName="Cambria Math" size="14" isBold="true"/>
+                </textElement>
+                <text><![CDATA[End Date]]></text>
+            </staticText>
+            <staticText>
+                <reportElement x="479" y="0" width="75" height="30" uuid="2c1f24dc-99cd-43a7-8bf0-db93699a953f">
+                    <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="cb8475dd-fbf8-4c73-88e3-e6f5d5147519"/>
+                </reportElement>
+                <textElement textAlignment="Center">
+                    <font fontName="Cambria Math" size="14" isBold="true"/>
+                </textElement>
+                <text><![CDATA[Status]]></text>
+            </staticText>
+            <line>
+                <reportElement x="0" y="20" width="553" height="1" uuid="8f34c9fc-9e4f-4f47-a1ec-84d1e68cbf81"/>
+            </line>
+        </band>
+    </columnHeader>
+    <detail>
+        <band height="30" splitType="Stretch">
+            <textField>
+                <reportElement x="0" y="0" width="50" height="30" uuid="d88fb7d1-9fe3-4352-8273-5eb035ff5684">
+                    <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b6374557-91d5-4730-a13d-19ddd0827747"/>
+                </reportElement>
+                <textElement textAlignment="Center">
+                    <font fontName="Cambria Math" size="10"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="50" y="0" width="110" height="30" uuid="80fda890-c867-4f90-a3ab-1085dc61d00a">
+                    <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="0b8c86b9-32e4-4f4f-8fe8-711f170dc22b"/>
+                </reportElement>
+                <textElement textAlignment="Center">
+                    <font fontName="Cambria Math" size="10"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="159" y="0" width="184" height="30" uuid="ef967c21-eb08-4da1-bb30-07a03b86ed9c">
+                    <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="4159b7e9-e4dd-4137-82dc-c04564019f9a"/>
+                </reportElement>
+                <textElement textAlignment="Center">
+                    <font fontName="Cambria Math" size="10"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{introduce}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="343" y="0" width="67" height="30" uuid="101b41c4-099e-4c89-9b6d-8e496fe8a1a6">
+                    <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="460fe6e6-39cd-4329-bc8c-20b9c8a7bea1"/>
+                </reportElement>
+                <textElement textAlignment="Center">
+                    <font fontName="Cambria Math" size="10"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{startdate}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="411" y="0" width="67" height="30" uuid="be9b1f5b-6037-42fd-81c8-646e583ac75d">
+                    <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="9bbd77e9-10e9-4eef-abe0-2ceb326395d6"/>
+                </reportElement>
+                <textElement textAlignment="Center">
+                    <font fontName="Cambria Math" size="10"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{enddate}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="479" y="0" width="75" height="30" uuid="34d64a33-c496-4ad3-9ae4-0bee5ab82763">
+                    <property name="com.jaspersoft.studio.spreadsheet.connectionID" value="cb8475dd-fbf8-4c73-88e3-e6f5d5147519"/>
+                </reportElement>
+                <textElement textAlignment="Center">
+                    <font fontName="Cambria Math" size="10"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$F{status}]]></textFieldExpression>
+            </textField>
+        </band>
+    </detail>
+    <columnFooter>
+        <band height="3" splitType="Stretch"/>
+    </columnFooter>
+    <pageFooter>
+        <band height="54" splitType="Stretch"/>
+    </pageFooter>
+    <summary>
+        <band height="42" splitType="Stretch"/>
+    </summary>
+</jasperReport>
